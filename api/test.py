@@ -2,8 +2,8 @@ import os.path
 import secrets
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request, jsonify, Flask
-from .form import RegistrationForm, LoginForm, UpdateAccountForm, AddForm
-from .model import User, AddNews
+from . form import RegistrationForm, LoginForm, UpdateAccountForm, AddForm
+from . model import User, AddNews
 from . import app, db, bcrypt
 from flask_login import login_user, current_user, logout_user, login_required
 basedir = os.path.abspath(os.path.dirname(__file__))
