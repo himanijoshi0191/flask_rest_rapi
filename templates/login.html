@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            Log In
+            <div class="form-group">
+                {{ form.email.label }}
+
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                {{ form.password.label}}
+
+                {{ form.password }}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit}}
+        </div>
+    </form>
+</div>
+<div>
+    Need An Account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a>
+    </small>
+</div>
+{% endblock content %}

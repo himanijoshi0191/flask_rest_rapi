@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="" enctype="multipart/form-data">
+        {{ form.hidden_tag()}}
+        <fieldset class="form-group">
+            <legend>{{ legend }}</legend>
+            <div class="form-group0">
+                {{ form.title.label }}
+
+                {{ form.title }}
+            </div>
+            <div class="form-group1">
+                {{ form.news_type.label}}
+
+                {{ form.news_type }}
+            </div>
+            <div class="form-group">
+                {{ form.content.label}}
+
+                {{ form.content }}
+            </div>
+            <div class="form-group">
+                {{ form.news_picture.label()}}
+
+                {{ form.news_picture }}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit }}
+        </div>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for post in posts %}
+<article class="media content-section">
+  <img class="rounded-circle article-img1" width="100" height="100"
+    src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }} ">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="{{ url_for('account') }}">{{ post.author.username }}</a>
+      <small class="data">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+    </div>
+
+    <div>
+      <h2 class="form-content">{{post.news_type}}</h2>
+    </div>
+    <h2><a class="data2" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
+    <p class="data1">{{ post.content }}</p>
+
+    <img class="rectanlge" width="100" height="100"
+      src="{{ url_for('static', filename='news_pics/' + post.image_file) }}">
+
+  </div>
+</article>
+{% endfor %}
+{% endblock content %}
