@@ -14,6 +14,7 @@ Flask Restful API (Create, Read, Update, Delete)
 * venv\Scripts\activate(windows)
 
 ## Installation and running:
-* pip install -r requirements.txt
 * cd flask_rest_rapi
+* python -m pip install --upgrade pip
+* pip install -r requirements.txt
 * python dispatcher.py
